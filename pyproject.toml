@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "action-terminal"
+version = "0.1.0"
+description = "API wrapper around a terminal to control a computer"
+authors = ["John Knapp <john.knappster@gmail.com>"]
+readme = "README.md"
+packages = [{include = "action"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.10.5"
+pydantic = "^2.9.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.3"
+pytest-aiohttp = "^1.0.5"
+pytest-asyncio = "^0.24.0"
+pytest-mock = "^3.14.0"
+pytest-timeout = "^2.3.1"
+ruff = "^0.1.0"  # For linting
+black = "^23.9b0"  # Code formatter
+mock = "^5.1.0"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+select = ["E", "F", "I"]
+ignore = ["E203"]  # Exclude only supported rules
+
+[tool.pytest.ini_options]
+addopts = "--maxfail=1 --disable-warnings"
+testpaths = [
+    "action/tests",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+

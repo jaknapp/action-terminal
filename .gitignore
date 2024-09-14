@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Unit test / coverage reports
+.coverage
+*.cover
+.pytest_cache/
+coverage.xml
+
+# Docker related files
+docker-compose.yml
+**/Dockerfile
+
+# Editor and system-specific files
+.idea/
+.vscode/
+*.swp
+*~
+*.log
+
+# Ignore Python package lock files if using virtual environments
+Pipfile.lock
+poetry.lock
+
