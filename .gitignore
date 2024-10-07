@@ -28,5 +28,4 @@ docker-compose.yml
 
 # Ignore Python package lock files if using virtual environments
 Pipfile.lock
-poetry.lock
 

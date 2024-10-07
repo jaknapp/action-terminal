@@ -21,6 +21,9 @@ ruff = "^0.1.0"  # For linting
 black = "^23.9b0"  # Code formatter
 mock = "^5.1.0"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
 [tool.black]
 line-length = 88
 target-version = ['py310']
